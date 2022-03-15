@@ -1,6 +1,10 @@
 .exchange-box{
   border:1px solid black;
   width:400px;
+  margin:auto;
+}
+h1{
+  text-align:center;
 }
 .input-area{
   width:100%;

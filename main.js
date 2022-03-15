@@ -14,21 +14,21 @@ let currencyRatio = {
   USD:{
     USD:1,
     KRW:2,
-    VMD:3,
+    VND:3,
     unit:"달러"
   },
   KRW:{
     USD:2,
     KRW:1,
-    VMD:3,
+    VND:3,
     unit:"원"
   },
-  VMD:{
+  VND:{
     USD:2,
     KRW:3,
-    VMD:1,
+    VND:1,
     unit:"동"
-  }
+  },
 };
 
 let fromCurrency = "USD";
@@ -41,10 +41,16 @@ document
     document.getElementById("from-button").textContent=this.textContent;
     //선택된 currency 값을 변수에 저장한다
     fromCurrency = this.textContent;
+    for(let item in currencyRatio){
+      console.log(currencyRatio[item]);
+    };
+    // console.log(textUnit);
+    // document.querySelector(".input-area div").innerText = textUnit;
+    // console.log(urrencyRatio.fromCurrency.unit);
     convert();
   }));
 
-  document
+document
   .querySelectorAll("#to-currency-list a")
   .forEach(menu=>menu.addEventListener("click",function(){
     //1. 버튼을 가져온다     //2. 버튼의 값을 바꾼다

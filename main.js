@@ -41,12 +41,10 @@ document
     document.getElementById("from-button").textContent=this.textContent;
     //선택된 currency 값을 변수에 저장한다
     fromCurrency = this.textContent;
-    for(let item in currencyRatio){
-      console.log(currencyRatio[item]);
-    };
-    // console.log(textUnit);
+    value=this.textContent;
+    
+    console.log(textUnit);
     // document.querySelector(".input-area div").innerText = textUnit;
-    // console.log(urrencyRatio.fromCurrency.unit);
     convert();
   }));
 
